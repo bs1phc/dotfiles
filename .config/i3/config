@@ -1,0 +1,255 @@
+set $mod Mod4
+
+font pango:FiraCode 8
+
+
+### Hide borders
+hide_edge_borders none
+
+for_window [class=".*"] border pixel 0
+#                          # class                 border  backgr. text    indicator child_border
+#for_window [class="^.*"] client.focused          #77dd77 #285577 #ffffff #2e9ef4   #285577
+
+
+
+### Change borders
+bindsym $mod+u border none
+bindsym $mod+y border pixel 2
+bindsym $mod+n border normal
+
+
+### Make focus follow the mouse
+focus_follows_mouse no
+
+#keybinds
+#bindsym $mod+Shift+Return exec urxvt
+bindsym $mod+F1 exec firefox-nightly
+bindsym $mod+b exec burpsuite
+bindsym $mod+z exec zaproxy
+bindsym $mod+c exec vscodium
+bindsym $mod+Return exec alacritty
+
+bindsym $mod+d exec "dmenu_run -nf '#FFFFFF' -nb '#000000' -sb '#333333' -sf '#FFFFFF' -fn 'monospace-10' -p 'dmenu prompt &gt;'"
+
+### System keybinds ########################################
+# bindsym XF86MonBrightnessUp exec "xbacklight -inc 5; notify-send 'Brightness up'"
+# bindsym XF86MonBrightnessDown exec "xbacklight -dec 5; notify-send 'Brightness down'"
+# bindsym XF86AudioRaiseVolume exec "amixer set Master 5%+; notify-send 'Volume up'"
+# bindsym XF86AudioLowerVolume exec "amixer set Master 5%-; notify-send 'Volume down'"
+# bindsym XF86AudioMute exec "amixer set Master toggle; notify-send 'Volume toggled'"
+# bindsym XF86AudioPlay exec playerctl play-pause
+# bindsym XF86AudioNext exec playerctl next
+# bindsym XF86AudioPrev exec playerctl previous
+
+### Execs
+exec /usr/bin/vmhgfs-fuse .host:/ /home/chp1sb/shared -o subtype=vmhgfs-fuse,allow_other
+#exec --no-startup-id nm-applet
+#exec --no-startup-id picom
+#exec --no-startup-id feh --bg-scale ~/.config/i3/wallpaper.jpg
+exec xsetroot -solid "#0000000"
+exec --no-startup-id pulseaudio
+exec --no-startup-id vmware-user-suid-wrapper
+exec --no-startup-id vmware-user
+
+
+
+### Windows #####################################
+
+# change focus
+bindsym $mod+j focus left
+bindsym $mod+k focus down
+bindsym $mod+l focus up
+bindsym $mod+semicolon focus right
+
+# alternatively, you can use the cursor keys:
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+# move focused window
+bindsym $mod+Shift+j move left
+bindsym $mod+Shift+k move down
+bindsym $mod+Shift+l move up
+bindsym $mod+Shift+semicolon move right
+
+# alternatively, you can use the cursor keys:
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+
+
+### spliting ################################
+bindsym $mod+h split v
+bindsym $mod+v split h
+
+# enter fullscreen mode for the focused container
+bindsym $mod+f fullscreen toggle
+### Kill focused container
+bindsym $mod+Shift+q kill
+
+
+# change container layout (stacked, tabbed, toggle split)
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+
+# change focus between tiling / floating windows
+bindsym $mod+space focus mode_toggle
+### Toggle tiling/floating container
+bindsym $mod+Shift+space floating toggle
+
+# focus the parent container
+bindsym $mod+a focus parent
+# focus the child container
+#bindsym $mod+d focus child
+
+
+# reload the file
+bindsym $mod+Shift+c reload
+# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym $mod+Shift+r restart
+
+
+## i3bar #######################################################################
+bar {
+	i3bar_command i3bar
+	status_command i3status --config .config/i3status/config
+	position top
+
+	bindsym button4 nop
+	bindsym button5 nop
+	strip_workspace_numbers yes
+
+    colors {
+    background #000000
+    statusline #FFFFFF
+    separator  #666666
+
+    focused_workspace  #5B5B5B #000000 #FFFFFF
+    active_workspace   #5B5B5B #000000 #FFFFFF
+    inactive_workspace #5B5B5B #000000 #888888
+    urgent_workspace   #2F343A #280000 #FFFFFF
+    binding_mode       #2F343A #280000 #FFFFFF
+  }
+}
+
+### Appearance
+set $bg-color 	           #ffffff
+set $inactive-bg-color     #23252e
+set $text-color            #23252e
+set $inactive-text-color   #ffffff
+set $urgent-bg-color       #ec0101
+
+# class                 border  bground text    indicator child_border
+client.focused          #5B5B5B #000000 #FFFFFF #000000   #000000
+client.focused_inactive #5B5B5B #000000 #888888 #000000   #000000
+client.unfocused        #5B5B5B #000000 #888888 #000000   #000000
+client.urgent           #2F343A #280000 #FFFFFF #000000   #000000
+client.placeholder      #5B5B5B #280000 #FFFFFF #000000   #000000
+
+client.background       #FFFFFF
+
+## Workspaces #############################################################
+
+# Define names for default workspaces for which we configure key bindings later on.
+# We use variables to avoid repeating the names in multiple places.
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
+set $ws10 "10"
+
+# switch to workspace
+bindsym $mod+1 workspace  $ws1
+bindsym $mod+2 workspace  $ws2
+bindsym $mod+3 workspace  $ws3
+bindsym $mod+4 workspace  $ws4
+bindsym $mod+5 workspace  $ws5
+bindsym $mod+6 workspace  $ws6
+bindsym $mod+7 workspace  $ws7
+bindsym $mod+8 workspace  $ws8
+bindsym $mod+9 workspace  $ws9
+bindsym $mod+0 workspace  $ws10
+
+# move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace  $ws1
+bindsym $mod+Shift+2 move container to workspace  $ws2
+bindsym $mod+Shift+3 move container to workspace  $ws3
+bindsym $mod+Shift+4 move container to workspace  $ws4
+bindsym $mod+Shift+5 move container to workspace  $ws5
+bindsym $mod+Shift+6 move container to workspace  $ws6
+bindsym $mod+Shift+7 move container to workspace  $ws7
+bindsym $mod+Shift+8 move container to workspace  $ws8
+bindsym $mod+Shift+9 move container to workspace  $ws9
+bindsym $mod+Shift+0 move container to workspace  $ws10
+
+### Navigate between workspaces
+bindsym $mod+Ctrl+Right workspace next
+bindsym $mod+Ctrl+Left workspace prev
+
+### Move focused containers between screens
+# bindsym $mod+o move workspace to output left
+# bindsym $mod+p move workspace to output right
+
+### Switch to workspace with urgent window automatically
+for_window [urgent=latest] focus
+
+
+## System menu #############################################################
+set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown, (b) off-screen
+mode "$mode_system" {
+    bindsym l exec --no-startup-id $Locker, mode "default"
+    bindsym e exec --no-startup-id i3-msg exit, mode "default"
+    bindsym s exec --no-startup-id $Locker && systemctl suspend, mode "default"
+    bindsym h exec --no-startup-id $Locker && systemctl hibernate, mode "default"
+    bindsym r exec --no-startup-id systemctl reboot, mode "default"
+    bindsym b exec --no-startup-id sleep 1 && xset dpms force off, mode "default"
+    bindsym Shift+s exec --no-startup-id systemctl poweroff -i, mode "default"
+
+    # back to normal: Enter or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+
+bindsym $mod+Pause mode "$mode_system"
+
+## Resize container #############################################################
+bindsym $mod+r mode "resize"
+mode "resize" {
+        # Resize using jkl;
+        bindsym j resize shrink width 5 px or 5 ppt
+        bindsym k resize grow height 5 px or 5 ppt
+        bindsym l resize shrink height 5 px or 5 ppt
+        bindsym semicolon resize grow width 5 px or 5 ppt
+
+        # Resize using arrow keys
+        bindsym Left resize shrink width 10 px or 10 ppt
+        bindsym Down resize grow height 10 px or 10 ppt
+        bindsym Up resize shrink height 10 px or 10 ppt
+        bindsym Right resize grow width 10 px or 10 ppt
+
+        # Exit resize mode
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
+
+## i3-gaps ##########################################################################
+### Set inner/outer gaps
+gaps inner 5
+gaps outer 5
+
+### Set inner/outer gaps for current/all & set/plus/minus <px>
+# gaps inner all set 10
+# gaps outer all plus 5
+
+### Smart borders
+smart_borders on
