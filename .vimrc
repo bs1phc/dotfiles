@@ -20,9 +20,9 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 "Plug 'neovim/nvim-lspconfig'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'bluz71/vim-moonfly-colors'
-Plug 'bs1phc/mnc.vim'
+"Plug 'bs1phc/mnc.vim'
 
-
+w
 
 call plug#end()
 
