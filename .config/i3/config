@@ -29,7 +29,8 @@ bindsym $mod+z exec zaproxy
 bindsym $mod+c exec vscodium
 bindsym $mod+Return exec alacritty
 
-bindsym $mod+d exec "dmenu_run -nf '#FFFFFF' -nb '#000000' -sb '#333333' -sf '#FFFFFF' -fn 'monospace-10' -p 'dmenu prompt &gt;'"
+#bindsym $mod+d exec "dmenu_run -nf '#FFFFFF' -nb '#000000' -sb '#333333' -sf '#FFFFFF' -fn 'monospace-10' -p 'dmenu prompt &gt;'"
+bindsym $mod+d exec rofi -show drun
 
 ### System keybinds ########################################
 # bindsym XF86MonBrightnessUp exec "xbacklight -inc 5; notify-send 'Brightness up'"
