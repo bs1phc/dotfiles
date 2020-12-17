@@ -7,7 +7,9 @@ general {
 }
 
 order += "disk /"
-
+order += "disk /bs1phc"
+order += "disk /storage"
+order += "disk /external"
 order += "run_watch VPN"
 #order += "wireless _first_"
 order += "ethernet _first_"
@@ -19,7 +21,18 @@ order += "volume master"
 order += "tztime local"
 
 disk "/" {
-        format = " %avail/%total"
+        format = "  %avail/%total "
+}
+
+
+disk "/external" { 
+	format = "  %avail/%total "
+}
+disk "/bs1phc" { 
+	format = "  %avail/%total "
+}
+disk "/storage" {
+        format = "  %avail/%total "   
 }
 
 run_watch VPN {

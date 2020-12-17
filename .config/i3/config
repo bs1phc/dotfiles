@@ -1,6 +1,6 @@
 set $mod Mod4
 
-font pango:FiraCode 8
+font pango: DejaVu Sans Mono 9
 
 
 ### Hide borders
@@ -32,6 +32,7 @@ bindsym $mod+Return exec alacritty
 #bindsym $mod+d exec "dmenu_run -nf '#FFFFFF' -nb '#000000' -sb '#333333' -sf '#FFFFFF' -fn 'monospace-10' -p 'dmenu prompt &gt;'"
 bindsym $mod+d exec rofi -show drun
 
+
 ### System keybinds ########################################
 # bindsym XF86MonBrightnessUp exec "xbacklight -inc 5; notify-send 'Brightness up'"
 # bindsym XF86MonBrightnessDown exec "xbacklight -dec 5; notify-send 'Brightness down'"
@@ -47,11 +48,12 @@ exec /usr/bin/vmhgfs-fuse .host:/ /home/chp1sb/shared -o subtype=vmhgfs-fuse,all
 #exec --no-startup-id nm-applet
 #exec --no-startup-id picom
 #exec --no-startup-id feh --bg-scale ~/.config/i3/wallpaper.jpg
-exec xsetroot -solid "#0000000"
+#exec xsetroot -solid "#0000000"
 exec --no-startup-id pulseaudio
-exec --no-startup-id vmware-user-suid-wrapper
-exec --no-startup-id vmware-user
-
+#exec --no-startup-id vmware-user-suid-wrapper
+#exec --no-startup-id vmware-user
+exec picom
+exec nitrogen --restore
 
 
 ### Windows #####################################

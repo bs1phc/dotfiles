@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/chp1sb/.oh-my-zsh"
+export ZSH="/home/bs1phc/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -116,11 +116,11 @@ alias i3conf="vim ~/.config/i3/config"
 
 
 #shared folders
-alias writeups="cd ~/shared/projects"
-alias archlive="~/shared/"
+#alias writeups="cd ~/shared/projects"
+#alias archlive="~/shared/"
 #PATHS
-export PATH=~/scripts:$PATH
-export PATH=~/scripts/ctf_start:$PATH
+export PATH=~/repos/configurations/scripts:$PATH
+export PATH=~/repos/configurations/scripts/ctf_start:$PATH
 export PATH="$PATH:$HOME/.rvm/bin"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
