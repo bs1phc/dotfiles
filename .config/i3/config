@@ -1,6 +1,6 @@
 set $mod Mod4
 
-font pango: DejaVu Sans Mono 9
+font pango: Cousine Nerd Font 9
 
 
 ### Hide borders
@@ -28,6 +28,7 @@ bindsym $mod+b exec burpsuite
 bindsym $mod+z exec zaproxy
 bindsym $mod+c exec vscodium
 bindsym $mod+Return exec alacritty
+bindsym Print exec flameshot gui
 
 #bindsym $mod+d exec "dmenu_run -nf '#FFFFFF' -nb '#000000' -sb '#333333' -sf '#FFFFFF' -fn 'monospace-10' -p 'dmenu prompt &gt;'"
 bindsym $mod+d exec rofi -show drun
@@ -54,7 +55,7 @@ exec --no-startup-id pulseaudio
 #exec --no-startup-id vmware-user
 exec picom
 exec nitrogen --restore
-
+exec --no-startup-id flameshot
 
 ### Windows #####################################
 

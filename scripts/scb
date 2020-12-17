@@ -1,0 +1,5 @@
+#!/bin/bash
+
+cd /opt/cobalt/ 
+sudo ./teamserver 10.8.13.246 bs1phc &
+sudo ./start.sh

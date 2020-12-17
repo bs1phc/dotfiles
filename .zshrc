@@ -1,16 +1,13 @@
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
-
-# Path to your oh-my-zsh installation.
+#PATHS
 export ZSH="/home/bs1phc/.oh-my-zsh"
+export PATH=~/repos/configurations/scripts:$PATH
+export PATH=~/repos/configurations/scripts/ctf_start:$PATH
+export PATH="$PATH:$HOME/.rvm/bin"
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-# Set name of the theme to load --- if set to "random", it will
-# load a random theme each time oh-my-zsh is loaded, in which case,
-# to know which specific one was loaded, run: echo $RANDOM_THEME
-# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="af-magic"
-# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
-
 
 # CASE_SENSITIVE="true"
 
@@ -110,19 +107,12 @@ alias ohmyzsh="vim ~/.oh-my-zsh"
 alias ida="wine64 /home/chp1sb/.wine/drive_c/Program\ Files/IDA\ 7.2/ida64.exe"
 alias burp="java -noverify -javaagent:/home/chp1sb/Hacking/Burp/burploader.jar -jar /home/chp1sb/Hacking/Burp/burpsuite_pro_v2020.9.2.jar"
 alias cobalt="cd /home/chp1sb/Hacking/cobalt/; sudo ./teamserver 10.8.13.246 chp1sb &; sudo ./start.sh "
-alias vim='nvim'
-alias vimconf='vim ~/.config/nvim/init.vim'
-alias i3conf="vim ~/.config/i3/config"
 
 
-#shared folders
-#alias writeups="cd ~/shared/projects"
-#alias archlive="~/shared/"
-#PATHS
-export PATH=~/repos/configurations/scripts:$PATH
-export PATH=~/repos/configurations/scripts/ctf_start:$PATH
-export PATH="$PATH:$HOME/.rvm/bin"
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+#edit configs
+
+alias zshconf='nvim ~/repos/configurations/.zshrc'
+alias vimconf='vim ~/repos/configurations/.config/nvim/init.vim'
+alias i3conf="nvim ~/repos/configurations/.config/i3/config"
+
 

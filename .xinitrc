@@ -35,3 +35,4 @@ fi
 wmname LG3D
 export AWT_TOOLKIT=MToolkit
 exec i3
+exec flameshot &
