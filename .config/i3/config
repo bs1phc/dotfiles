@@ -57,6 +57,7 @@ exec picom
 exec nitrogen --restore
 exec --no-startup-id flameshot
 
+
 ### Windows #####################################
 
 # change focus
@@ -122,6 +123,12 @@ bar {
 	i3bar_command i3bar
 	status_command i3status --config .config/i3status/config
 	position top
+	
+	
+	output HDMI-1
+	output DVI-D-0
+
+
 
 	bindsym button4 nop
 	bindsym button5 nop
@@ -139,7 +146,6 @@ bar {
     binding_mode       #2F343A #280000 #FFFFFF
   }
 }
-
 ### Appearance
 set $bg-color 	           #ffffff
 set $inactive-bg-color     #23252e
