@@ -1,6 +1,7 @@
 set $mod Mod4
+set $alt Mod1
 
-font pango: Cousine Nerd Font 9
+font pango: Cousine Nerd Font 7  
 
 
 ### Hide borders
@@ -23,15 +24,10 @@ focus_follows_mouse no
 
 #keybinds
 #bindsym $mod+Shift+Return exec urxvt
-bindsym $mod+F1 exec firefox-nightly
-bindsym $mod+b exec burpsuite
-bindsym $mod+z exec zaproxy
-bindsym $mod+c exec vscodium
 bindsym $mod+Return exec alacritty
 bindsym Print exec flameshot gui
 
-#bindsym $mod+d exec "dmenu_run -nf '#FFFFFF' -nb '#000000' -sb '#333333' -sf '#FFFFFF' -fn 'monospace-10' -p 'dmenu prompt &gt;'"
-bindsym $mod+d exec rofi -show drun
+bindsym $mod+d exec "dmenu_run -nf '#FFFFFF' -nb '#000000' -sb '#333333' -sf '#FFFFFF' -fn 'monospace-10' -p 'dmenu prompt &gt;'"
 
 
 ### System keybinds ########################################
@@ -45,16 +41,10 @@ bindsym $mod+d exec rofi -show drun
 # bindsym XF86AudioPrev exec playerctl previous
 
 ### Execs
-exec /usr/bin/vmhgfs-fuse .host:/ /home/chp1sb/shared -o subtype=vmhgfs-fuse,allow_other
-#exec --no-startup-id nm-applet
-#exec --no-startup-id picom
-#exec --no-startup-id feh --bg-scale ~/.config/i3/wallpaper.jpg
-#exec xsetroot -solid "#0000000"
+exec --no-startup-id nm-applet
+exec --no-startup-id picom
 exec --no-startup-id pulseaudio
-#exec --no-startup-id vmware-user-suid-wrapper
-#exec --no-startup-id vmware-user
-exec picom
-exec nitrogen --restore
+exec --no-startup-id nitrogen --restore
 exec --no-startup-id flameshot
 
 
@@ -123,12 +113,6 @@ bar {
 	i3bar_command i3bar
 	status_command i3status --config .config/i3status/config
 	position top
-	
-	
-	output HDMI-1
-	output DVI-D-0
-
-
 
 	bindsym button4 nop
 	bindsym button5 nop
@@ -176,6 +160,16 @@ set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
+set $ws11 "11"
+set $ws12 "12"
+set $ws13 "13"
+set $ws14 "14"
+set $ws15 "15"
+set $ws16 "16"
+set $ws17 "17"
+set $ws18 "18"
+set $ws19 "19"
+set $ws20 "20"
 
 # switch to workspace
 bindsym $mod+1 workspace  $ws1
@@ -188,6 +182,16 @@ bindsym $mod+7 workspace  $ws7
 bindsym $mod+8 workspace  $ws8
 bindsym $mod+9 workspace  $ws9
 bindsym $mod+0 workspace  $ws10
+bindsym $alt+1 workspace  $ws11
+bindsym $alt+2 workspace  $ws12
+bindsym $alt+3 workspace  $ws13
+bindsym $alt+4 workspace  $ws14
+bindsym $alt+5 workspace  $ws15
+bindsym $alt+6 workspace  $ws16
+bindsym $alt+7 workspace  $ws17
+bindsym $alt+8 workspace  $ws18
+bindsym $alt+9 workspace  $ws19
+bindsym $alt+0 workspace  $ws20
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace  $ws1
@@ -200,6 +204,18 @@ bindsym $mod+Shift+7 move container to workspace  $ws7
 bindsym $mod+Shift+8 move container to workspace  $ws8
 bindsym $mod+Shift+9 move container to workspace  $ws9
 bindsym $mod+Shift+0 move container to workspace  $ws10
+bindsym $alt+Shift+1 move container to workspace  $ws11
+bindsym $alt+Shift+2 move container to workspace  $ws12
+bindsym $alt+Shift+3 move container to workspace  $ws13
+bindsym $alt+Shift+4 move container to workspace  $ws14
+bindsym $alt+Shift+5 move container to workspace  $ws15
+bindsym $alt+Shift+6 move container to workspace  $ws16
+bindsym $alt+Shift+7 move container to workspace  $ws17
+bindsym $alt+Shift+8 move container to workspace  $ws18
+bindsym $alt+Shift+9 move container to workspace  $ws19
+bindsym $alt+Shift+0 move container to workspace  $ws20
+
+
 
 ### Navigate between workspaces
 bindsym $mod+Ctrl+Right workspace next
