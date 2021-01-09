@@ -1,43 +1,40 @@
-font:
-  size: 8 
+colors:
+  primary:
+    foreground: '#d0cfcc'
+    background: '#171421'
 
   normal:
-    family: Cousine Nerd Font 
-    type: Regular
+    black:   '#171421'
+    red:     '#c01c28'
+    green:   '#26a269'
+    yellow:  '#a2734c'
+    blue:    '#12488b'
+    magenta: '#a347ba'
+    cyan:    '#2aa1b3'
+    white:   '#d0cfcc'
 
-cursor:
-  style: Underline
+  bright:
+    black:   '#5e5c64'
+    red:     '#f66151'
+    green:   '#33d17a'
+    yellow:  '#e9ad0c'
+    blue:    '#2a7bde'
+    magenta: '#c061cb'
+    cyan:    '#33c7de'
+    white:   '#ffffff'
 
 background_opacity: 0.65
 
-# Colors (Blood Moon)
-colors:
-  # Default colors
-  primary:
-    background: '#10100E'
-    foreground: '#C6C6C4'
+font:
+  size: 9
 
-  # Normal colors
   normal:
-    black:   '#10100E'
-    red:     '#C40233'
-    green:   '#009F6B'
-    yellow:  '#FFD700'
-    blue:    '#0087BD'
-    magenta: '#9A4EAE'
-    cyan:    '#20B2AA'
-    white:   '#C6C6C4'
+    family: Cousine Nerd Font
+    type: Regular
 
-  # Bright colors
-  bright:
-    black:   '#696969'
-    red:     '#FF2400'
-    green:   '#03C03C'
-    yellow:  '#FDFF00'
-    blue:    '#007FFF'
-    magenta: '#FF1493'
-    cyan:    '#00CCCC'
-    white:   '#FFFAFA'
+cursor:
+  style: Beam 
+  shape: Block
 
 window:
     padding:
@@ -56,3 +53,4 @@ key_bindings:
   - { key: Equals, mods: Control, action: IncreaseFontSize }
   - { key: Minus, mods: Control, action: DecreaseFontSize }
   - { key: N, mods: Control, action: SpawnNewInstance }
+
