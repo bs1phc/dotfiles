@@ -1,7 +1,7 @@
 set $mod Mod4
 set $alt Mod1 
 
-font pango: Cousine Nerd Font 9 
+font pango: Cousine Nerd Font 7
 
 
 ### Hide borders
@@ -29,9 +29,9 @@ bindsym $mod+b exec burpsuite
 bindsym $mod+z exec zaproxy
 bindsym $mod+c exec subl
 bindsym $mod+Return exec alacritty
-bindsym $mod+d exec rofi -show drun
+bindsym $alt+s exec rofi -show drun
 bindsym $alt+d exec rofi -show window
-bindsym $alt+s exec --no-startup-id "rofi -show drun -font \\"Cousine Nerd Font 9\\" -run-shell-command '{terminal} -e \\" {cmd}; read -n 1 -s\\"'
+bindsym $mod+d exec --no-startup-id "rofi -show drun -font \\"Cousine Nerd Font 9\\" -run-shell-command '{terminal} -e \\" {cmd}; read -n 1 -s\\"'
  
 
 ### System keybinds ########################################
