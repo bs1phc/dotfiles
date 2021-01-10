@@ -7,13 +7,6 @@ Window Managers
 Editor
 	Nvim
 
-Scripts
-	Start Ctf
-	Install i3 in other vms
-	revershe shell generator
-	start vpn
-	unzip all for bash
-
 Shells
 	zsh
 
@@ -35,10 +28,10 @@ Wallpapers
 	erazer gaming !!they look good for my dark setups
 	anime
 
+#Plugins For OhMyZsh
 
-TODO
-[ ] Install Script
-[ ] Install Script i3 for other distros
-[ ] Start ctf script 
-[ ] Reverse shell generator
-[ ] startvpn
+syntax highlithing git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+completions   git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-completions
+suggestions git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+
+
