@@ -33,6 +33,7 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
 fi
 setxkbmap gb
 wmname LG3D
+wmname compiz
 export AWT_TOOLKIT=MToolkit
 exec i3
 exec flameshot &

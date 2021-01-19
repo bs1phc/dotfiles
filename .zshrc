@@ -1,6 +1,6 @@
 #PATHS
 export ZSH="/home/chp1sb/.oh-my-zsh"
-export PATH=~/repos/configurations/scripts:$PATH
+export PATH=~/repos/scripts:$PATH
 export PATH=~/.gem/ruby/2.7.0/bin:$PATH
 
 ZSH_THEME="gallois"
@@ -107,4 +107,6 @@ alias zshconf='nvim ~/repos/configurations/.zshrc'
 alias vimconf='vim ~/repos/configurations/.config/nvim/init.vim'
 alias i3conf="nvim ~/repos/configurations/.config/i3/config"
 alias confs="cd ~/repos/configurations"
+alias notes="cd /storage/Notes"
 
+alias sburp="java --illegal-access=permit -Dfile.encoding=utf-8 -javaagent:/opt/Burp/BurpSuiteLoader_v2020.11.3.jar -noverify -jar /opt/Burp/burpsuite_pro_v2020.11.3.jar"
